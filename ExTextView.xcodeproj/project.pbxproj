@@ -15,6 +15,12 @@
 		4A62D5612AFF73BD0038B0DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A62D55F2AFF73BD0038B0DD /* LaunchScreen.storyboard */; };
 		4A62D56A2AFF763B0038B0DD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4A62D5692AFF763B0038B0DD /* SnapKit */; };
 		4A62D56C2AFF763B0038B0DD /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4A62D56B2AFF763B0038B0DD /* SnapKit-Dynamic */; };
+		4A62D56F2AFF83200038B0DD /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 4A62D56E2AFF83200038B0DD /* RxBlocking */; };
+		4A62D5712AFF83200038B0DD /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4A62D5702AFF83200038B0DD /* RxBlocking-Dynamic */; };
+		4A62D5732AFF83200038B0DD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4A62D5722AFF83200038B0DD /* RxCocoa */; };
+		4A62D5752AFF83200038B0DD /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 4A62D5742AFF83200038B0DD /* RxCocoa-Dynamic */; };
+		4A62D5772AFF83200038B0DD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4A62D5762AFF83200038B0DD /* RxRelay */; };
+		4A62D5792AFF8D6B0038B0DD /* CursorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A62D5782AFF8D6B0038B0DD /* CursorEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,7 @@
 		4A62D55D2AFF73BD0038B0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A62D5602AFF73BD0038B0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A62D5622AFF73BD0038B0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A62D5782AFF8D6B0038B0DD /* CursorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +41,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A62D56A2AFF763B0038B0DD /* SnapKit in Frameworks */,
+				4A62D56F2AFF83200038B0DD /* RxBlocking in Frameworks */,
+				4A62D5772AFF83200038B0DD /* RxRelay in Frameworks */,
+				4A62D5732AFF83200038B0DD /* RxCocoa in Frameworks */,
 				4A62D56C2AFF763B0038B0DD /* SnapKit-Dynamic in Frameworks */,
+				4A62D5752AFF83200038B0DD /* RxCocoa-Dynamic in Frameworks */,
+				4A62D5712AFF83200038B0DD /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +75,7 @@
 				4A62D5542AFF73BC0038B0DD /* AppDelegate.swift */,
 				4A62D5562AFF73BC0038B0DD /* SceneDelegate.swift */,
 				4A62D5582AFF73BC0038B0DD /* ViewController.swift */,
+				4A62D5782AFF8D6B0038B0DD /* CursorEntity.swift */,
 				4A62D55A2AFF73BC0038B0DD /* Main.storyboard */,
 				4A62D55D2AFF73BD0038B0DD /* Assets.xcassets */,
 				4A62D55F2AFF73BD0038B0DD /* LaunchScreen.storyboard */,
@@ -90,6 +103,11 @@
 			packageProductDependencies = (
 				4A62D5692AFF763B0038B0DD /* SnapKit */,
 				4A62D56B2AFF763B0038B0DD /* SnapKit-Dynamic */,
+				4A62D56E2AFF83200038B0DD /* RxBlocking */,
+				4A62D5702AFF83200038B0DD /* RxBlocking-Dynamic */,
+				4A62D5722AFF83200038B0DD /* RxCocoa */,
+				4A62D5742AFF83200038B0DD /* RxCocoa-Dynamic */,
+				4A62D5762AFF83200038B0DD /* RxRelay */,
 			);
 			productName = ExTextView;
 			productReference = 4A62D5512AFF73BC0038B0DD /* ExTextView.app */;
@@ -121,6 +139,7 @@
 			mainGroup = 4A62D5482AFF73BC0038B0DD;
 			packageReferences = (
 				4A62D5682AFF763B0038B0DD /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4A62D56D2AFF83200038B0DD /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 4A62D5522AFF73BC0038B0DD /* Products */;
 			projectDirPath = "";
@@ -149,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A62D5792AFF8D6B0038B0DD /* CursorEntity.swift in Sources */,
 				4A62D5592AFF73BC0038B0DD /* ViewController.swift in Sources */,
 				4A62D5552AFF73BC0038B0DD /* AppDelegate.swift in Sources */,
 				4A62D5572AFF73BC0038B0DD /* SceneDelegate.swift in Sources */,
@@ -384,6 +404,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		4A62D56D2AFF83200038B0DD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -396,6 +424,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A62D5682AFF763B0038B0DD /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		4A62D56E2AFF83200038B0DD /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A62D56D2AFF83200038B0DD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		4A62D5702AFF83200038B0DD /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A62D56D2AFF83200038B0DD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		4A62D5722AFF83200038B0DD /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A62D56D2AFF83200038B0DD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		4A62D5742AFF83200038B0DD /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A62D56D2AFF83200038B0DD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		4A62D5762AFF83200038B0DD /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A62D56D2AFF83200038B0DD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

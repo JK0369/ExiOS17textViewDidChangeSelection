@@ -16,8 +16,9 @@ class ViewController: UIViewController {
         v.backgroundColor = .lightGray
         return v
     }()
+    
     private let textView = {
-        let v = UITextView()
+        let v = MyTextView()
         v.text = """
                 1 iOS 앱 개발 알아가기 \n 2 iOS 앱 개발 알아가기 \n 3 iOS 앱 개발 알아가기 \n 4 iOS 앱 개발 알아가기 \n
                 5 iOS 앱 개발 알아가기 \n 6 iOS 앱 개발 알아가기 \n 7 iOS 앱 개발 알아가기 \n 8 iOS 앱 개발 알아가기 \n
@@ -53,16 +54,29 @@ class ViewController: UIViewController {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        textView.delegate = self
+        textView.selectionCursorBlock = { cursor in
+            print(cursor.isOverraped)
+            print(cursor.startCursorRect)
+            print(cursor.endCursorRect)
+        }
     }
+}
+
+extension ViewController: UITextViewDelegate {
+    func textViewDidChangeSelection(_ textView: UITextView) {
+//        print("range>", textView.selectedRange)
+    }
+}
+
+class MyTextView: UITextView {
+    var selectionCursorBlock: ((CursorEntity) -> ())?
     
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        
-//        stackView.snp.remakeConstraints {
-//            $0.horizontalEdges.equalToSuperview()
-//            $0.top.equalToSuperview().offset(100)
-//            $0.bottom.equalToSuperview().offset(-300).priority(.low)
-//            $0.height.equalTo(textView.contentSize.height)
-//        }
-//    }
+    override func selectionRects(for range: UITextRange) -> [UITextSelectionRect] {
+        let ret = super.selectionRects(for: range)
+        guard let cursorEntity = CursorEntity(textView: self, range: range) else { return ret }
+        selectionCursorBlock?(cursorEntity)
+        return ret
+    }
 }
